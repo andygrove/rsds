@@ -172,6 +172,7 @@ def plot_task_lifespan(tasks, end_time, packets, task_filter=None):
         "finish": "red",
         "running": "green",
         "retract": "black",
+        "retract-end": "gray",
     }
     data = collections.defaultdict(lambda: [])
 
@@ -200,7 +201,7 @@ def plot_task_lifespan(tasks, end_time, packets, task_filter=None):
             if ev[0] == name:
                 return ev
 
-    extra_actions = ("compute-start", "compute-end", "place", "retract")
+    extra_actions = ("compute-start", "compute-end", "place", "retract", "retract-end")
     for task in sorted(tasks.values(), key=lambda t: t.id):
         if task_filter and task.key not in task_filter:
             continue

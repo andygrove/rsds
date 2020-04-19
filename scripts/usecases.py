@@ -16,10 +16,10 @@ from sklearn.datasets import make_classification
 from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVC
-from wordbatch.batcher import Batcher
-from wordbatch.extractors import WordBag
-from wordbatch.pipelines import WordBatch, ApplyBatch
-from wordbatch.transformers import Tokenizer, Dictionary
+#from wordbatch.batcher import Batcher
+#from wordbatch.extractors import WordBag
+#from wordbatch.pipelines import WordBatch, ApplyBatch
+#from wordbatch.transformers import Tokenizer, Dictionary
 
 non_alphanums = re.compile(r'[\W+]')
 nums_re = re.compile(r"\W*[0-9]+\W*")
